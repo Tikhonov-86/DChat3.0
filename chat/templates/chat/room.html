@@ -5,10 +5,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Chat Room</title>
+    <title>Вы в команте: {{ room_name }}</title>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
+    <h1 align="center">{{ room_name }}</h1>
+    <textarea id="chat-log" cols="98" rows="20"></textarea><br><br>
     <input id="chat-message-input" type="text" size="100"><br>
     <input id="chat-message-submit" type="button" value="Send">
     {{ room_name|json_script:"room-name" }}
