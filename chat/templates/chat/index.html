@@ -5,9 +5,17 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Chat Rooms</title>
+    {% load static %}
+    <title>{% block title %}DChat{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <ul class="navigation">
+        <span class="nav-title"><i>DChat</i></span>
+        <a href="{% url 'profile' %}" title="Ваш профиль"><li>Профиль</li></a>
+        <a href="{% url 'room_choice' %}" title="Back to choice room"><li>Выбор комнаты</li></a>
+    </ul>
+    
     <h1 align="center">Choise room</h1>
     What chat room would you like to enter?<br>
     <input id="room-name-input" type="text" size="100"><br>

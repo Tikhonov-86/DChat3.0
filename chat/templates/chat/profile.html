@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
 
-{% block title %}{{ user.username }} | Личный кабинет {% endblock %}
+{% extends "index.html" %}
+{% load static %}
 
-<div>
-    <title>Your Profile</title>
-</div>
+{% block title %}Профиль{% endblock %}
+    
+{% block content %}
+    <h1>Ваш профиль</h1>
+    <p>Информация о пользователе будет здесь.</p>
+{% endblock %}
